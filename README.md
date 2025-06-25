@@ -36,6 +36,12 @@ kubectl get pods
 <img width="604" alt="image" src="https://github.com/user-attachments/assets/ac4c94aa-76e3-43cd-b7ad-457c2d121632" /> # The following image shows the successful pulling of the image from dockerhub
 kubectl apply -f service.yaml
 <img width="565" alt="image" src="https://github.com/user-attachments/assets/e1554bdc-dced-4c41-ba86-aa6996a2fc7a" /> # The following image shows the successful creation of the service
+kubectl expose deployment be-deployment \
+  --name=backend-service \
+  --port=80 \
+  --target-port=80 \
+  --type=ClusterIP
+
 
 
 
