@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fe-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: fe
+  template:
+    metadata:
+      labels:
+        app: fe
+    spec:
+      containers:
+      - name: fe-container
+        image: shahdsamir19/myapp:latest 
+        ports:
+        - containerPort: 80
+
